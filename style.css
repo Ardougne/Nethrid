@@ -1,0 +1,74 @@
+/* CSS STYLE */
+
+/* Imports the Varela Round font */
+		
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+		
+html {
+	/* General */
+	font-family: 'Varela Round', sans-serif;
+	padding: 8px;
+	scroll-behavior: smooth;
+}
+				
+p {
+	/* The p tag */
+	font-size: 20px;
+}
+				
+.navbar-div {
+	/* Navigation bar */
+	height: 50px;
+	margin: 3px;
+}					
+				
+.navbar-li {
+	/* Navigation bar (li element) */
+	display: inline-block;
+	text-decoration: none;
+	list-style-type: none;
+	font-size: 23px;
+	padding: 8px;
+	color: black;
+}
+				
+.hero-image-1 {
+	/* The first hero image */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo.png");
+	height: 800px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+				
+.hero-image-2 {
+	/* The second hero image */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo2.png");
+	height: 800px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+				
+.hero-image-3 {
+	/* The third hero image */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo3.png");
+	height: 800px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+				
+.hero-text {
+	/* The hero text */
+	color: white;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 50px;
+}
