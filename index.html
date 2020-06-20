@@ -1,153 +1,130 @@
 <!DOCTYPE HTML>
 	<html>
 		<head>
-		
-			<!-- START OF THE CODE -->
-			
-			<!-- META TAGS -->
-			
 			<meta charset="UTF-8">
 			<meta name="description" content="Quality websites on the cheap">
 			<meta name="keywords" content="Websites, Website creation, HTML, CSS, gentoo.best">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-			<!-- END OF META TAGS -->
-			
 			<title>gentoo.best - Bringing you the best of web design</title>
-			
-			<!-- CSS SPREADSHEET -->
-			
 			<style>
-			
-			/* CSS STYLE */
-			
-				/* Imports the Varela Round font */
-				
+
 				@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 			
 				html {
 				/* General */
 					font-family: 'Varela Round', sans-serif;
-					padding: 8px;
+					/* padding: 8px;
+						avoid putting paddings/margins on the <html> tag, use them on <body> instead */
 					scroll-behavior: smooth;
 				}
 				
 				p {
-				/* The p tag */
 					font-size: 20px;
 				}
 				
-				.navbar-div {
-				/* Navigation bar */
-					height: 50px;
-					margin: 3px;
-				}					
-				
-				.navbar-li {
-				/* Navigation bar (li element) */
-					display: inline-block;
-					text-decoration: none;
-					list-style-type: none;
+				/*.navbar-div*/
+				nav {
+					/* height: 50px; */
+					/* margin: 3px; instead of setting margin and height separately, try to use just margin */
+					margin: 25px 3px;
 					font-size: 23px;
+					text-align: center;
+					/* applying styles directly to <nav> instead of the <a> items inside the <nav> */
+				}			
+				/* elements like <nav>, <section>, <header> and <footer> have semantic meaning and are a good choice for sectioning big parts of a page */
+				
+				/*.navbar-li*/
+				nav a {
+					/* display: inline-block; */
+					text-decoration: none;
+					/* list-style-type: none; */
+					/* font-size: 23px; */
 					padding: 8px;
 					color: black;
 				}
 				
-					[class^=hero-image-1] {
-					/*The first hero image*/
-						background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo.png");
-						min-height: 40vw;
-						background-repeat: no-repeat;
-						background-position: center;
-						background-size: cover;
-						position: relative;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						padding: 20px;
-				}
-				
-					[class^=hero-image-2] {
-					/*The second hero image*/
-						background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo2.png");
-						min-height: 40vw;
-						background-repeat: no-repeat;
-						background-position: center;
-						background-size: cover;
-						position: relative;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						padding: 20px;
-				}
-				
-					[class^=hero-image-3] {
-					/*The first hero image*/
-						background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo3.png");
-						min-height: 40vw;
-						background-repeat: no-repeat;
-						background-position: center;
-						background-size: cover;
-						position: relative;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						padding: 20px;
-				}
-				
-				.hero-text {
-				/* The hero text */
-					color: white;
+				.heroSection {
+					height: 800px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+					display: flex;
+					/* position: relative; */
+					justify-content: center;
+					align-items: center;
+					/* setting text-align and color on <section> elements instead of <> */
 					text-align: center;
+					color: white;
+					padding: 15px; /* added for responsive-ness */
+				}
+				
+				.hero-image-1 {
+					background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo.png");
+				}
+				
+				.hero-image-2 {
+					background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo2.png");
+				}
+				
+				.hero-image-3 {
+					background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo3.png");
+				}
+				
+				h1 {
 					font-size: 50px;
 				}
 				
+				/*
+				.hero-text {
+					color: white;
+					text-align: center;
+					font-size: 50px; THIS PROPERTY WAS HAVING NO EFFECT, APPLY IT DIRECTLY ON THE <h1> ELEMENT
+				}
+				*/
+				
+				/* media query for smaller screens */
+				@media all and (max-width: 800px) {
+					nav a {
+						display: block;
+						font-size: 20px;
+					}
+				}
 				
 			</style>
 			
 		</head>
 		
 		<body>
-		
-			<!-- NAVBAR -->
 			
-			<div class="navbar">
-			<ul style="text-align: center;">
-				<li class="navbar-li"><a style="color: #1a78ab;">gentoo.best | </a></li>
-				<li class="navbar-li"><a href="#aboutus" style="color: black; text-decoration: none;">About me</a></li>
-				<li class="navbar-li"><a href="#reasons" style="color: black; text-decoration: none;">Why should you choose me</a></li>
-				<li class="navbar-li"><a href="#contact" style="color: black; text-decoration: none;">Contacts</a></li>
-			</ul>
+			<nav>
+				<a style="color: #1a78ab;">gentoo.best | </a>
+				<a href="#aboutus" style="color: black; text-decoration: none;">About me</a>
+				<a href="#reasons" style="color: black; text-decoration: none;">Why should you choose me</a>
+				<a href="#contact" style="color: black; text-decoration: none;">Contacts</a>
+			</nav>
 			
-			<!-- HERO IMAGE 1 -->
-			
-			<div class="hero-image-1">
-			  <div class="hero-text">
+			<section class="heroSection hero-image-1">
+			  	<div>
 					<h1 id="aboutus">About me</h1>
 					<p>I operate from Czech Republic and I specialize in personal websites and even small local businesses. If you want quality websites at reasonable prices, then I'm the best person you can find! I do not do any websites for medium/large businesses yet, so keep that in mind.</p>
 				</div>
-			</div>
+			</section>
 			
-			<!-- HERO IMAGE 2 -->
-			
-			<div class="hero-image-2">
-			  <div class="hero-text">
+			<section class="heroSection hero-image-2">
+			  	<div>
 					<h1 id="reasons">Why should you choose me?</h1>
 					<p>I have very low prices, ranging from a whooping <strong>$0</strong> to $10, depending on the type of site, my code is highly readable, and I accept BTC payment.</p>
 				</div>
-			</div>
+			</section>
 			
-			<!-- HERO IMAGE 3 -->
-			
-			<div class="hero-image-3">
-			  <div class="hero-text">
+			<section class="heroSection hero-image-3">
+			  	<div>
 					<h1 id="contact">Contacts</h1>
 					<p>My email address is vedivinci@protonmail.com, I use ProtonMail since it's anonymous.</p>
 				</div>
-			</div>
-			
-			<!-- END OF THE CODE -->
+			</section>
 			
 		</body>
 		
 	</html>
+
